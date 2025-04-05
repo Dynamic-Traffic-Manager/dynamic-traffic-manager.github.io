@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema di Bilanciamento Dinamico del Traffico</title>
+    <link rel="icon" type="image/x-icon" href="Dynamic-Traffic-Manager-Icon-NOBACKGROUND.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->6
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .feature-box h3 {
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        .intro-section .feature-box h3 {
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        .intro-section .feature-box h3 i {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .intro-section .feature-box p {
+            text-align: center;
+        }
+
+        /* Mobile Navbar Styles */
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+            .navbar-brand img {
+                height: 30px;
+                margin-right: 8px;
+            }
+            .navbar-collapse {
+                background-color: rgba(33, 37, 41, 0.95);
+                padding: 1rem;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+            }
+            .navbar-nav {
+                text-align: center;
+            }
+            .nav-link {
+                padding: 0.5rem 1rem;
+                margin: 0.25rem 0;
+                border-radius: 0.25rem;
+                transition: all 0.3s ease;
+            }
+            .nav-link:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            .navbar-toggler {
+                border: none;
+                padding: 0.5rem;
+            }
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Dynamic-Traffic-Manager-Icon-NOBACKGROUND.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                Sistema di Bilanciamento Dinamico del Traffico
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Caratteristiche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#simulation">Simulazione</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#costi">Prezzi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Gestione Intelligente del Traffico</h1>
+            <p class="lead">Un sistema che <strong>bilancia automaticamente</strong> il traffico urbano, <strong>riduce
+                    la congestione</strong> e <strong>monitora in tempo reale</strong> i flussi veicolari.</p>
+            <div class="hero-buttons">
+                <a href="#simulation" class="btn btn-primary me-3">
+                    <i class="fas fa-play-circle me-2"></i>Prova la Simulazione
+                </a>
+                <a href="#costi" class="btn btn-outline-light">
+                    <i class="fas fa-calculator me-2"></i>Scopri i Costi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <h2 class="intro-title">Gestione Intelligente del Traffico per le Città Moderne</h2>
+            <p class="intro-description">
+                La congestione del traffico è una delle sfide più significative che affrontano le aree urbane moderne.
+                Il nostro sistema di bilanciamento dinamico del traffico utilizza dati in tempo reale e algoritmi
+                intelligenti per distribuire il flusso di traffico in modo ottimale tra le strade principali e
+                secondarie.
+            </p>
+            <div class="intro-features">
+                <div class="feature-box">
+                    <div class="icon-box">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-center">Monitoraggio in Tempo Reale</h3>
+                    <p>Il sistema monitora continuamente il numero di veicoli su ogni strada, utilizzando sensori
+                        avanzati e algoritmi di analisi in tempo reale per prendere decisioni immediate.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon-box">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-center">Bilanciamento Dinamico</h3>
+                    <p>Quando la strada principale supera i 10 veicoli in 30 secondi, il traffico viene reindirizzato
+                        alla strada secondaria, prevenendo la congestione prima che si verifichi.</p>
+                </div>
+                <div class="feature-box impact">
+                    <div class="icon-box">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-center">Impatto Ambientale</h3>
+                    <p>Il bilanciamento continuo del traffico riduce le emissioni, migliora la qualità dell'aria e
+                        contribuisce a una migliore qualità della vita per i residenti della città.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="intro-content" style="max-width: 1400px;">
+            <h2 class="intro-title text-center">Come Funziona il Nostro Sistema di Traffico</h2>
+            <div class="intro-features" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr)); gap: 2rem; margin: 0 auto;">
+                <div class="feature-box" style="text-align: center;">
+                    <div class="icon-box">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-center">Monitoraggio del Traffico</h3>
+                    <p class="text-center">Il sistema <strong>traccia continuamente</strong> il numero di veicoli sulle strade
+                        principali e secondarie, fornendo <strong>dati in tempo reale</strong> sulla densità del
+                        traffico e sui tassi di flusso.</p>
+                </div>
+                <div class="feature-box" style="text-align: center;">
+                    <div class="icon-box">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-center">Finestra di 30 Secondi</h3>
+                    <p class="text-center">Il sistema analizza i modelli di traffico all'interno di <strong>finestre temporali di 30
+                            secondi</strong> per prendere decisioni informate su quando reindirizzare i veicoli tra
+                        le strade.</p>
+                </div>
+                <div class="feature-box" style="text-align: center;">
+                    <div class="icon-box">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="text-center">Reindirizzamento Basato su Soglie</h3>
+                    <p class="text-center">Quando vengono rilevate <strong>più di 10 auto</strong> sulla strada principale in una
+                        finestra di 30 secondi, il sistema <strong>reindirizza automaticamente</strong> i nuovi
+                        veicoli alla strada secondaria.</p>
+                </div>
+                <div class="feature-box" style="text-align: center;">
+                    <div class="icon-box">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-center">Distribuzione Bilanciata</h3>
+                    <p class="text-center">Se anche la strada secondaria supera le <strong>10 auto</strong> nella finestra temporale, il
+                        traffico viene diretto nuovamente alla strada principale, mantenendo un <strong>equilibrio
+                            ottimale</strong> tra le strade.</p>
+                </div>
+                <div class="feature-box" style="text-align: center;">
+                    <div class="icon-box">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-center">Prevenzione della Congestione</h3>
+                    <p class="text-center">Ridistribuendo <strong>proattivamente</strong> il traffico prima che si formino colli di
+                        bottiglia, il sistema <strong>previene la congestione</strong> prima che si verifichi.</p>
+                </div>
+                <div class="feature-box" style="text-align: center;">
+                    <div class="icon-box">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3 class="text-center">Adattamento in Tempo Reale</h3>
+                    <p class="text-center">Il sistema si <strong>adatta continuamente</strong> alle mutevoli condizioni del traffico,
+                        garantendo un <strong>flusso ottimale</strong> indipendentemente dall'ora del giorno o da
+                        eventi di traffico imprevisti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Simulation Section -->
+    <section id="simulation" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Demo Interattiva di Controllo del Traffico</h2>
+            <p class="text-center mb-4">Clicca qui sotto per vedere la <strong>simulazione interattiva</strong> di
+                controllo del traffico. Questa demo mostra come il nostro sistema gestisce dinamicamente il flusso del
+                traffico tra strade principali e secondarie.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="simulation-container">
+                        <div class="scratch-frame">
+                            <div class="placeholder">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Carica la simulazione Scratch</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="text-center mb-4">Istruzioni per l'Avvio della Simulazione</h3>
+                    <p class="text-center">Per avviare la simulazione, cliccare al centro dell'area di visualizzazione. Su dispositivi desktop, utilizzare il tasto freccia in su per generare il traffico. Su dispositivi mobili, utilizzare il pulsante dedicato presente nell'interfaccia.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="text-center mb-4">Istruzioni per l'Utilizzo della Demo</h3>
+                    <p class="text-center">Questa simulazione interattiva permette di visualizzare il funzionamento del
+                        sistema, che bilancia automaticamente il traffico tra le strade, garantendo la
+                        <strong>prevenzione della congestione</strong> e un <strong>flusso ottimale</strong> del
+                        traffico. Per avviare un'auto, premi la freccia in su. La simulazione dimostra come il sistema
+                        regola in tempo reale il traffico per ottenere un'efficace gestione della viabilità.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Sperimenta i Benefici della Gestione Intelligente del Traffico</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-percentage"></i>
+                        <h3>35%</h3>
+                        <p><strong>Meno Congestione</strong> del Traffico</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>20 min</h3>
+                        <p><strong>Tempi di Percorrenza</strong> Ridotti</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>24/7</h3>
+                        <p><strong>Monitoraggio</strong> in Tempo Reale</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Costi Section -->
+    <section id="costi" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Costi delle Soluzioni</h2>
+            <div class="row">
+                <!-- Versione Standard -->
+                <div class="col-md-6 mb-4">
+                    <div class="cost-card standard">
+                        <div class="cost-header">
+                            <i class="fas fa-plug"></i>
+                            <h3>Versione Standard</h3>
+                        </div>
+                        <div class="cost-content">
+                            <h4>Componenti Base</h4>
+                            <ul class="cost-list">
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005008224505460.html" target="_blank" class="component-link">
+                                        <i class="fas fa-microchip"></i>
+                                        Adattatore ESP01 per programmazione
+                                        <span class="price">0,78€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005008224505460.html" target="_blank" class="component-link">
+                                        <i class="fas fa-microchip"></i>
+                                        N Microcontrollori Arduino ESP01
+                                        <span class="price">1,13€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005003428445062.html" target="_blank" class="component-link">
+                                        <i class="fas fa-bolt"></i>
+                                        Step-Down Regolabile (24V -> 5V) LM2596S
+                                        <span class="price">0,91€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005003211459664.html" target="_blank" class="component-link">
+                                        <i class="fas fa-plug"></i>
+                                        Relè 5V SRD-05
+                                        <span class="price">1,01€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.amazon.it/derivazione-elettronica-impermeabile-collegamento-grigio-bianco/dp/B0CW8RF7XW/ref=asc_df_B0CW8RF7XW" target="_blank" class="component-link">
+                                        <i class="fas fa-box"></i>
+                                        Scatola di derivazione impermeabile
+                                        <span class="price">10,99€</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4>Componenti Standard</h4>
+                            <ul class="cost-list">
+                                <li>
+                                    <a href="https://nl.aliexpress.com/item/1005006640784307.html" target="_blank" class="component-link">
+                                        <i class="fas fa-bolt"></i>
+                                        Trasformatore 220V AC --> 24V DC
+                                        <span class="price">3,27€</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4>Costi Variabili</h4>
+                            <ul class="cost-list">
+                                <li>
+                                    <a href="#" class="component-link">
+                                        <i class="fas fa-plug"></i>
+                                        Cavo elettrico (1,40€/metro)
+                                        <span class="price">Variabile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="component-link">
+                                        <i class="fas fa-tools"></i>
+                                        Installazione
+                                        <span class="price">Variabile</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="cost-total">
+                                Totale Componenti: <strong>18,10€</strong>
+                            </div>
+                            <div class="cost-note">
+                                <i class="fas fa-info-circle"></i>
+                                Clicca su ogni componente per acquistarlo dal negozio indicato
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Versione EcoFriendly -->
+                <div class="col-md-6 mb-4">
+                    <div class="cost-card eco-friendly">
+                        <div class="cost-header">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Versione EcoFriendly</h3>
+                        </div>
+                        <div class="cost-content">
+                            <h4>Componenti Base</h4>
+                            <ul class="cost-list">
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005008224505460.html" target="_blank" class="component-link">
+                                        <i class="fas fa-microchip"></i>
+                                        Adattatore ESP01 per programmazione
+                                        <span class="price">0,78€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005008224505460.html" target="_blank" class="component-link">
+                                        <i class="fas fa-microchip"></i>
+                                        N Microcontrollori Arduino ESP01
+                                        <span class="price">1,13€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005003428445062.html" target="_blank" class="component-link">
+                                        <i class="fas fa-bolt"></i>
+                                        Step-Down Regolabile (24V -> 5V) LM2596S
+                                        <span class="price">0,91€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005003211459664.html" target="_blank" class="component-link">
+                                        <i class="fas fa-plug"></i>
+                                        Relè 5V SRD-05
+                                        <span class="price">1,01€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.amazon.it/dp/B09H622LN3/ref=sspa_dk_hqp_detail_aax_0" target="_blank" class="component-link">
+                                        <i class="fas fa-box"></i>
+                                        Scatola di derivazione per eco
+                                        <span class="price">23,29€</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4>Componenti EcoFriendly</h4>
+                            <ul class="cost-list">
+                                <li>
+                                    <a href="https://it.aliexpress.com/item/1005007212510001.html" target="_blank" class="component-link">
+                                        <i class="fas fa-solar-panel"></i>
+                                        Pannello solare 24V 100W
+                                        <span class="price">33,26€</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.amazon.it/Ricaricabile-elettriche-Emergenza-Elettronica-Trattorino/dp/B08HX5S6JM/ref=asc_df_B08HX5S6JM" target="_blank" class="component-link">
+                                        <i class="fas fa-battery-full"></i>
+                                        2x Batteria 12V 10 ah
+                                        <span class="price">32,80€</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4>Costi Variabili</h4>
+                            <ul class="cost-list">
+                                <li>
+                                    <a href="#" class="component-link">
+                                        <i class="fas fa-plug"></i>
+                                        Cavo elettrico (1,40€/metro)
+                                        <span class="price">Variabile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="component-link">
+                                        <i class="fas fa-tools"></i>
+                                        Installazione
+                                        <span class="price">Variabile</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="cost-total">
+                                Totale Componenti: <strong>93,18€</strong>
+                            </div>
+                            <div class="cost-note">
+                                <i class="fas fa-info-circle"></i>
+                                Clicca su ogni componente per acquistarlo dal negozio indicato
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Prova il Sistema in Azione</h2>
+            <a href="#simulation" class="btn btn-primary btn-lg"><i class="fas fa-play-circle me-2"></i>Esplora la Demo
+                Interattiva</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h5 class="mb-4">Crediti</h5>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="team-section d-flex flex-column justify-content-center align-items-center h-100">
+                                <h6 class="mb-3">Membri del Gruppo</h6>
+                                <ul class="list-unstyled team-members text-center">
+                                    <li><i class="fas fa-user me-2"></i> Simone Lonardi</li>
+                                    <li><i class="fas fa-user me-2"></i> Michele Lonardi</li>
+                                    <li><i class="fas fa-user me-2"></i> Berardo Andrea</li>
+                                    <li><i class="fas fa-user me-2"></i> Giavoni Emanuele</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="info-section d-flex flex-column justify-content-center align-items-center h-100">
+                                <h6 class="mb-3">Informazioni</h6>
+                                <div class="project-info mb-3 text-center">
+                                    <i class="fas fa-code-branch me-2"></i>
+                                    Progetto sviluppato da 4Ci (Gruppo 6)
+                                </div>
+                                <div class="school-info mb-3 text-center">
+                                    <i class="fas fa-graduation-cap me-2"></i>
+                                    Scuola IIS Silva Ricci
+                                </div>
+                                <div class="location-info text-center">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    Legnago (VR)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Dynamic Traffic Manager. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
