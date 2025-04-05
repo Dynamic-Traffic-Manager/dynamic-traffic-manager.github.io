@@ -49,11 +49,25 @@
                 margin-right: 1rem;
                 display: flex;
                 align-items: center;
+                padding-left: 0;
             }
             .navbar-brand img {
                 height: clamp(20px, 4vw, 25px);
                 margin-right: 5px;
                 flex-shrink: 0;
+            }
+            .navbar-toggler {
+                border: none;
+                padding: 0.5rem;
+                margin-left: 0;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                width: 1.5em;
+                height: 1.5em;
             }
             .navbar-collapse {
                 background-color: rgba(33, 37, 41, 0.95);
@@ -75,14 +89,6 @@
             .nav-link:hover {
                 background-color: rgba(255, 255, 255, 0.1);
             }
-            .navbar-toggler {
-                border: none;
-                padding: 0.5rem;
-                margin-left: 0;
-            }
-            .navbar-toggler:focus {
-                box-shadow: none;
-            }
             .container {
                 padding-right: 0.5rem;
                 padding-left: 0.5rem;
@@ -102,7 +108,7 @@
                 <img src="Dynamic-Traffic-Manager-Icon-NOBACKGROUND.png" alt="Logo" style="height: 40px; margin-right: 10px;">
                 Sistema di Bilanciamento Dinamico del Traffico
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
