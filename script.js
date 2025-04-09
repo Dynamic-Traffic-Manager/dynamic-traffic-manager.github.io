@@ -68,4 +68,97 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.classList.remove('navbar-scrolled');
     }
-}); 
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Contact Form Handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validation checks
+            if (!name || name.length < 2) {
+                showError('name', 'Inserisci un nome valido (minimo 2 caratteri)');
+                return;
+            }
+            
+            if (!email || !isValidEmail(email)) {
+                showError('email', 'Inserisci un indirizzo email valido');
+                return;
+            }
+            
+            if (!subject || subject.length < 5) {
+                showError('subject', 'L\'oggetto deve contenere almeno 5 caratteri');
+                return;
+            }
+            
+            if (!message || message.length < 10) {
+                showError('message', 'Il messaggio deve contenere almeno 10 caratteri');
+                return;
+            }
+            
+            // If all validations pass, prepare the email
+            const mailtoLink = `mailto:dynamic-traffic-manager@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                `Nome: ${name}\nEmail: ${email}\n\nMessaggio:\n${message}`
+            )}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form and show success message
+            contactForm.reset();
+            showSuccess('Messaggio preparato con successo! Apri il tuo client email per inviarlo.');
+        });
+    }
+});
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function showError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'invalid-feedback d-block';
+    errorDiv.textContent = message;
+    
+    // Remove any existing error message
+    const existingError = field.parentElement.querySelector('.invalid-feedback');
+    if (existingError) {
+        existingError.remove();
+    }
+    
+    field.classList.add('is-invalid');
+    field.parentElement.appendChild(errorDiv);
+    
+    // Focus on the field with error
+    field.focus();
+}
+
+function showSuccess(message) {
+    // Create success alert
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+    alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    // Insert alert before the form
+    const form = document.getElementById('contactForm');
+    form.parentElement.insertBefore(alertDiv, form);
+    
+    // Auto-dismiss after 5 seconds
+    setTimeout(() => {
+        const bsAlert = new bootstrap.Alert(alertDiv);
+        bsAlert.close();
+    }, 5000);
+} 

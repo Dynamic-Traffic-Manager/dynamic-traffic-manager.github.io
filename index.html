@@ -4,6 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dynamic Traffic Manager - Un progetto scolastico innovativo per la gestione del traffico stradale. Scopri la nostra simulazione interattiva e le soluzioni proposte.">
+    <meta name="keywords" content="traffico, gestione traffico, progetto scolastico, 4Ci, Itis Silva Ricci, IIS Silva Ricci, simulazione traffico, Scratch, educazione stradale, graf contest, graf ideas, graf competition, graf, graf 2025, graf ideas 2025, 2025">
+    <meta name="author" content="4Ci - Gruppo 6">
+    <meta name="robots" content="index, nofollow">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Dynamic Traffic Manager - Progetto GRAF">
+    <meta property="og:description" content="Un progetto innovativo per la gestione del traffico stradale sviluppato da alcuni studenti della 4Ci dell'IIS Silva Ricci.">
+    <meta property="og:image" content="https://scratch.mit.edu/projects/1156817768/embed">
+    <meta property="og:url" content="https://dynamic-traffic-manager.github.io">
+    <meta property="og:type" content="website">
+    
     <title>Sistema di Bilanciamento Dinamico del Traffico</title>
     <link rel="icon" type="image/x-icon" href="Dynamic-Traffic-Manager-Icon-NOBACKGROUND.png">
     <!-- Google Fonts -->
@@ -12,7 +26,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->6
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         .feature-box h3 {
@@ -33,6 +47,21 @@
         }
         .intro-section .feature-box p {
             text-align: center;
+        }
+
+        /* QR Code Icon Styles */
+        .qr-icon {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            color: #fff;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        .qr-icon:hover {
+            color: #0d6efd;
         }
 
         /* Mobile Navbar Styles */
@@ -109,7 +138,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#costi">Prezzi</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contattaci</a>
+                    </li>
                 </ul>
+                <a class="nav-link qr-icon" href="#" data-bs-toggle="modal" data-bs-target="#qrModal">
+                    <i class="fas fa-qrcode"></i>
+                </a>
             </div>
         </div>
     </nav>
@@ -244,11 +279,14 @@
                 <div class="col-lg-10">
                     <div class="simulation-container">
                         <div class="scratch-frame">
-                            <div class="placeholder">
-                                <i class="fas fa-play-circle"></i>
-                                <p>Carica la simulazione Scratch</p>
-                            </div>  
-                        </div>
+                            <iframe src="https://scratch.mit.edu/projects/1156817768/embed" 
+                                    width="100%" 
+                                    height="100%" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowfullscreen=""
+                                    allow="autoplay"></iframe>
+                        </div>c
                     </div>
                 </div>
             </div>
@@ -496,37 +534,47 @@
 
     <!-- Footer -->
     <footer class="py-4">
-        <div class="container">
+        <div class="container px-2">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h5 class="mb-4">Crediti</h5>
-                    <div class="row justify-content-center">
-                        <div class="col-md-4">
+                    <h5 class="mb-4">Informazioni e Contatti</h5>
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-5">
                             <div class="team-section d-flex flex-column justify-content-center align-items-center h-100">
-                                <h6 class="mb-3">Membri del Gruppo</h6>
+                                <h6 class="mb-2">Membri del Gruppo</h6>
                                 <ul class="list-unstyled team-members text-center">
-                                    <li><i class="fas fa-user me-2"></i> Berardo Andrea</li>
-                                    <li><i class="fas fa-user me-2"></i> Giavoni Emanuele</li>
-                                    <li><i class="fas fa-user me-2"></i> Lonardi Michele</li>
-                                    <li><i class="fas fa-user me-2"></i> Lonardi Simone</li>
+                                    <li class="mb-1"><i class="fas fa-user me-2"></i> Berardo Andrea</li>
+                                    <li class="mb-1"><i class="fas fa-user me-2"></i> Giavoni Emanuele</li>
+                                    <li class="mb-1"><i class="fas fa-user me-2"></i> Lonardi Michele</li>
+                                    <li class="mb-1"><i class="fas fa-user me-2"></i> Lonardi Simone</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <div class="info-section d-flex flex-column justify-content-center align-items-center h-100">
-                                <h6 class="mb-3">Informazioni</h6>
-                                <div class="project-info mb-3 text-center">
+                                <h6 class="mb-2">Informazioni e Contatti</h6>
+                                <div class="project-info mb-2 text-center">
                                     <i class="fas fa-code-branch me-2"></i>
-                                    Progetto sviluppato da 4Ci (Gruppo 6)
+                                    Progetto sviluppato da alcuni studenti della 4Ci (Gruppo 6)
                                 </div>
-                                <div class="school-info mb-3 text-center">
+                                <div class="school-info mb-2 text-center">
                                     <i class="fas fa-graduation-cap me-2"></i>
-                                    Istituto IIS Silva Ricci
+                                    <a href="https://www.iis-silva-ricci.edu.it/" target="_blank" class="text-decoration-none text-light">
+                                        Istituto IIS Silva Ricci
+                                    </a>
                                 </div>
-                                <div class="location-info text-center">
+                                <div class="location-info mb-2 text-center">
                                     <i class="fas fa-map-marker-alt me-2"></i>
-                                    Legnago (VR)
+                                    <a href="https://www.google.com/maps/place/Legnago+VR" target="_blank" class="text-decoration-none text-light">
+                                        Legnago (VR)
+                                    </a>
+                                </div>
+                                <div class="email-contact text-center">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    <a href="mailto:dynamic-traffic-manager@gmail.com" class="text-decoration-none text-light">
+                                        dynamic-traffic-manager@gmail.com
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -535,10 +583,148 @@
             </div>
             <hr class="my-4">
             <div class="text-center">
-                <p class="mb-0">&copy; 2025 Dynamic Traffic Manager. Tutti i diritti riservati.</p>
+                <p class="mb-0">
+                    <span>&copy; 2025 Dynamic Traffic Manager. Tutti i diritti riservati.</span>
+                    <span class="ms-4">
+                        <a href="#" class="text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#legalModal">Note Legali</a>
+                    </span>
+                </p>
             </div>
         </div>
     </footer>
+
+    <!-- Note Legali Modal -->
+    <div class="modal fade" id="legalModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note Legali</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Informazioni Generali</h6>
+                    <p>Questo sito web è stato sviluppato come progetto scolastico da alcuni studenti della classe 4Ci dell'IIS Silva Ricci di Legnago. Il sito è stato creato esclusivamente a scopo didattico e non ha fini commerciali.</p>
+                    
+                    <h6 class="mt-4">Proprietà Intellettuale</h6>
+                    <p>Tutti i contenuti presenti su questo sito, inclusi testi, immagini, loghi, design e codice sorgente, sono protetti da copyright e sono di proprietà degli autori del progetto. È vietata qualsiasi forma di riproduzione, distribuzione o modifica senza l'esplicito consenso degli autori.</p>
+                    <p class="mt-2">La simulazione interattiva è sviluppata utilizzando la piattaforma Scratch, di proprietà del Massachusetts Institute of Technology (MIT). Tutti i diritti relativi alla piattaforma Scratch, inclusi i contenuti generati tramite essa, sono di proprietà del MIT. Gli autori di questo sito non detengono alcun diritto sulla piattaforma Scratch o sui suoi contenuti.</p>
+                    
+                    <h6 class="mt-4">Contenuti Generati da IA</h6>
+                    <p>Alcuni contenuti presenti su questo sito potrebbero essere stati generati o assistiti da sistemi di intelligenza artificiale. Gli autori si impegnano a garantire l'accuratezza delle informazioni, ma non possono garantire la perfezione assoluta dei contenuti generati da IA. Si consiglia agli utenti di verificare personalmente le informazioni presentate.</p>
+                    
+                    <h6 class="mt-4">Responsabilità</h6>
+                    <p>Gli autori del sito non si assumono alcuna responsabilità per:</p>
+                    <ul>
+                        <li>Eventuali errori, omissioni o imperfezioni nei contenuti, inclusi quelli generati da IA</li>
+                        <li>Danni diretti o indiretti derivanti dall'uso del sito</li>
+                        <li>Interruzioni o malfunzionamenti del servizio</li>
+                        <li>Contenuti di siti terzi collegati</li>
+                        <li>Contenuti, funzionamento, privacy policy o utilizzo di cookie della piattaforma Scratch</li>
+                        <li>Eventuali danni o problemi derivanti dall'utilizzo della simulazione Scratch</li>
+                    </ul>
+                    <p class="mt-2">Il sito è stato sviluppato a scopo didattico e potrebbe contenere imperfezioni o errori. Gli autori si impegnano a correggere eventuali problemi segnalati, ma non garantiscono la perfezione assoluta del sito o dei suoi contenuti.</p>
+                    
+                    <h6 class="mt-4">Collegamenti Esterni</h6>
+                    <p>I link a siti esterni sono forniti per comodità degli utenti. Gli autori non sono responsabili del contenuto, della privacy policy o delle pratiche di siti terzi. Si consiglia di leggere attentamente le condizioni d'uso e le politiche sulla privacy di ogni sito visitato.</p>
+
+                    <h6 class="mt-4">Simulazione Scratch</h6>                    <p>La simulazione interattiva è sviluppata utilizzando la piattaforma Scratch, di proprietà del MIT. Si noti che:</p>
+                    <ul>
+                        <li>La piattaforma Scratch è gestita e controllata esclusivamente dal MIT</li>
+                        <li>Scratch potrebbe raccogliere informazioni e utilizzare cookie per il funzionamento della piattaforma</li>
+                        <li>La simulazione è eseguita in un ambiente sandbox per garantire la sicurezza</li>
+                        <li>Per maggiori informazioni sulla privacy, l'utilizzo dei cookie e le condizioni d'uso di Scratch, si prega di consultare la <a href="https://scratch.mit.edu/privacy_policy/" target="_blank">Privacy Policy di Scratch</a> e i <a href="https://scratch.mit.edu/terms_of_use/" target="_blank">Termini di Utilizzo di Scratch</a></li>
+                        <li>Gli autori di questo sito non sono responsabili per il contenuto, il funzionamento o le politiche di Scratch</li>
+                    </ul>
+
+                    <h6 class="mt-4">Modifiche e Aggiornamenti</h6>
+                    <p>Gli autori si riservano il diritto di modificare, aggiornare o rimuovere qualsiasi parte del sito senza preavviso. Le modifiche alle note legali entreranno in vigore immediatamente dopo la loro pubblicazione sul sito.</p>
+
+                    <h6 class="mt-4">Contatti</h6>
+                    <p>Per qualsiasi informazione, richiesta o segnalazione, è possibile contattarci all'indirizzo email: <a href="mailto:dynamic-traffic-manager@gmail.com">dynamic-traffic-manager@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contattaci</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+                            <div class="contact-info d-flex flex-column justify-content-center h-100">
+                                <h6 class="mb-4">Informazioni di Contatto</h6>
+                                <p class="mb-3 text-dark">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    <a href="mailto:dynamic-traffic-manager@gmail.com" class="text-decoration-none text-dark">
+                                        dynamic-traffic-manager@gmail.com
+                                    </a>
+                                </p>
+                                <p class="mb-3 text-dark">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    <a href="https://www.google.com/maps/place/Legnago+VR" target="_blank" class="text-decoration-none text-dark">
+                                        Legnago (VR), Italia
+                                    </a>
+                                </p>
+                                <p class="mb-3 text-dark">
+                                    <i class="fas fa-school me-2"></i>
+                                    <a href="https://www.iis-silva-ricci.edu.it/" target="_blank" class="text-decoration-none text-dark">
+                                        IIS Silva Ricci
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Invia un Messaggio</h6>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nome e Cognome</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Oggetto</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Messaggio</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane me-2"></i>Invia Messaggio
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">QR Code</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <img src="QRCode.jpg" alt="QR Code" class="img-fluid" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
