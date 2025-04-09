@@ -71,26 +71,30 @@
             .navbar {
                 padding: 0.5rem 1rem;
             }
-            .navbar-brand {
-                font-size: 0.9rem;
-                white-space: normal; /* Permette l'andare a capo */
-                overflow: visible;   /* Mostra tutto il contenuto */
-                text-overflow: unset; /* Disabilita ellissi */
-                max-width: 100%;     /* Consenti tutta la larghezza disponibile */
-                position: relative;
-                display: inline-block;
-                line-height: 1.2;     /* Aggiunta per un po' di respiro tra le righe */
-            }
+            @media (max-width: 991.98px) {
+    .navbar-brand {
+        display: inline-flex;
+        align-items: center;
+        max-width: 60%; /* spazio limitato per il titolo */
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
 
-            .navbar-brand::after {
-                content: none; /* Rimuove il gradient di fine */
-            }
+    .navbar-brand img {
+        height: 30px;
+        margin-right: 8px;
+        flex-shrink: 0; /* evita che l’icona si riduca */
+    }
+
+    .navbar-brand::after {
+        content: none;
+    }
+}
+
             
-            .navbar-brand img {
-                height: 25px;
-                margin-right: 5px;
-                vertical-align: middle;
-            }
             .navbar-collapse {
                 background-color: rgba(33, 37, 41, 0.95);
                 padding: 1rem;
