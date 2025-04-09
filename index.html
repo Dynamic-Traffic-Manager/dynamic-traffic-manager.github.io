@@ -73,22 +73,19 @@
             }
             .navbar-brand {
                 font-size: 0.9rem;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 80%;
+                white-space: normal; /* Permette l'andare a capo */
+                overflow: visible;   /* Mostra tutto il contenuto */
+                text-overflow: unset; /* Disabilita ellissi */
+                max-width: 100%;     /* Consenti tutta la larghezza disponibile */
                 position: relative;
                 display: inline-block;
+                line-height: 1.2;     /* Aggiunta per un po' di respiro tra le righe */
             }
+
             .navbar-brand::after {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 2rem;
-                background: linear-gradient(to right, transparent, #212529);
+                content: none; /* Rimuove il gradient di fine */
             }
+            
             .navbar-brand img {
                 height: 25px;
                 margin-right: 5px;
