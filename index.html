@@ -13,7 +13,7 @@
     
     <!-- Social Media Meta Tags -->
     <meta property="og:title" content="Dynamic Traffic Manager - Progetto GRAF">
-    <meta property="og:description" content="Un progetto innovativo per la gestione del traffico stradale sviluppato da alcuni studenti della 4Ci dell'IIS Silva Ricci.">
+    <meta property="og:description" content="Un progetto innovativo per la gestione del traffico stradale sviluppato da alcuni studenti della classe 4Ci dell'IIS Silva Ricci.">
     <meta property="og:image" content="https://scratch.mit.edu/projects/1156817768/embed">
     <meta property="og:url" content="https://dynamic-traffic-manager.github.io">
     <meta property="og:type" content="website">
@@ -26,6 +26,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -75,10 +77,22 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 max-width: 80%;
+                position: relative;
+                display: inline-block;
+            }
+            .navbar-brand::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 2rem;
+                background: linear-gradient(to right, transparent, #212529);
             }
             .navbar-brand img {
                 height: 25px;
                 margin-right: 5px;
+                vertical-align: middle;
             }
             .navbar-collapse {
                 background-color: rgba(33, 37, 41, 0.95);
@@ -112,6 +126,47 @@
                 padding-right: 0.5rem;
                 padding-left: 0.5rem;
             }
+        }
+
+        .advantage-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .advantage-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .advantage-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .advantage-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+
+        .advantage-card p {
+            color: #6c757d;
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -264,21 +319,80 @@
         </div>
     </section>
 
+    <!-- Vantaggi Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Vantaggi</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card h-100">
+                        <div class="advantage-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Resistenza agli Agenti Atmosferici</h3>
+                        <p>Il sistema è <strong>progettato per resistere a polvere e schizzi d'acqua</strong>, garantendo <strong>protezione contro gli agenti atmosferici</strong> e <strong>funzionamento affidabile</strong> in diverse condizioni ambientali.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card h-100">
+                        <div class="advantage-icon">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                        </div>
+                        <h3>Circuiti Compatti</h3>
+                        <p>I circuiti sono <strong>estremamente compatti</strong>, permettendo una <strong>facile installazione</strong> in qualsiasi contesto urbano senza occupare spazio eccessivo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card h-100">
+                        <div class="advantage-icon">
+                            <i class="fas fa-euro-sign"></i>
+                        </div>
+                        <h3>Costo Contenuto</h3>
+                        <p>Il sistema offre un <strong>ottimo rapporto qualità-prezzo</strong>, con costi di produzione e manutenzione <strong>significativamente inferiori</strong> rispetto alle soluzioni tradizionali.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card h-100">
+                        <div class="advantage-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrializzazione</h3>
+                        <p>Il design modulare permette una <strong>facile industrializzazione</strong> e <strong>produzione in serie</strong>, garantendo scalabilità e adattabilità a diverse esigenze urbane.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card h-100">
+                        <div class="advantage-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Manutenzione Semplice</h3>
+                        <p>Il sistema è progettato per una <strong>manutenzione rapida e semplice</strong>, con componenti facilmente accessibili e sostituibili, riducendo i tempi di inattività.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card h-100">
+                        <div class="advantage-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Basso Consumo Energetico</h3>
+                        <p>Grazie all'utilizzo di componenti a <strong>basso consumo energetico</strong>, il sistema garantisce un <strong>funzionamento efficiente</strong> con costi operativi minimi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Simulation Section -->
     <section id="simulation" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Demo Interattiva di Controllo del Traffico</h2>
-            <p class="text-center mb-4">Clicca qui sotto per vedere la <strong>simulazione interattiva</strong> di
-                controllo del traffico. Questa demo mostra come il nostro sistema gestisce dinamicamente il flusso del
-                traffico tra strade principali e secondarie.</p>
             <div class="row mt-3">
                 <div class="col-lg-8 mx-auto">
-                    <h3 class="text-center mb-4">Come Utilizzare la Simulazione</h3>
-                    <p class="text-center mb-4">Per iniziare l'esperienza interattiva, segui queste semplici istruzioni:</p>
-                    <div class="instructions-box p-4 bg-light rounded">
+                    <div class="instructions-box p-4 bg-light rounded animate__animated animate__fadeIn">
+                        <h3 class="text-center mb-4">Come Utilizzare la Simulazione</h3>
+                        <p class="text-center mb-4">Per iniziare l'esperienza interattiva, segui queste semplici istruzioni:</p>
                         <p class="mb-3"><strong>Desktop:</strong> Clicca al centro dell'area di visualizzazione per avviare la simulazione. Utilizza il tasto freccia in su per generare il traffico.</p>
-                        <p class="mb-0"><strong>Mobile:</strong> Tocca al centro dell'area di visualizzazione per avviare la simulazione. Utilizza il pulsante dedicato presente nell'interfaccia per generare il traffico.</p>
+                        <p class="mb-0"><strong>Mobile:</strong> Tocca al centro dell'area di visualizzazione per avviare la simulazione. Utilizza il bottone con l'icona del sito posizionato in basso a sinistra per generare il traffico.</p>
                     </div>
                 </div>
             </div>
@@ -300,10 +414,13 @@
             <div class="row mt-5">
                 <div class="col-lg-8 mx-auto">
                     <h3 class="text-center mb-4">Funzionalità della Demo</h3>
-                    <p class="text-center">Questa simulazione interattiva permette di visualizzare il funzionamento del
+                    <p class="text-center mb-4">Questa simulazione interattiva permette di visualizzare il funzionamento del
                         sistema, che bilancia automaticamente il traffico tra le strade, garantendo la
                         <strong>prevenzione della congestione</strong> e un <strong>flusso ottimale</strong> del
                         traffico. La simulazione dimostra come il sistema regola in tempo reale il traffico per ottenere un'efficace gestione della viabilità.</p>
+                    <p class="text-center">Clicca qui sopra per vedere la <strong>simulazione interattiva</strong> di
+                        controllo del traffico. Questa demo mostra come il nostro sistema gestisce dinamicamente il flusso del
+                        traffico tra strade principali e secondarie.</p>
                 </div>
             </div>
         </div>
@@ -555,7 +672,7 @@
                                 <h6 class="mb-2">Informazioni e Contatti</h6>
                                 <div class="project-info mb-2 text-center">
                                     <i class="fas fa-code-branch me-2"></i>
-                                    Progetto sviluppato da alcuni studenti della 4Ci (Gruppo 6)
+                                    Progetto sviluppato da 4Ci (Gruppo 6)
                                 </div>
                                 <div class="school-info mb-2 text-center">
                                     <i class="fas fa-graduation-cap me-2"></i>
@@ -571,8 +688,8 @@
                                 </div>
                                 <div class="email-contact text-center">
                                     <i class="fas fa-envelope me-2"></i>
-                                    <a href="mailto:dynamic-traffic-manager@gmail.com" class="text-decoration-none text-light">
-                                        dynamic-traffic-manager@gmail.com
+                                    <a href="mailto:dynamictrafficmanager@gmail.com" class="text-decoration-none text-light">
+                                        dynamictrafficmanager@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -639,7 +756,7 @@
                     <p>Gli autori si riservano il diritto di modificare, aggiornare o rimuovere qualsiasi parte del sito senza preavviso. Le modifiche alle note legali entreranno in vigore immediatamente dopo la loro pubblicazione sul sito.</p>
 
                     <h6 class="mt-4">Contatti</h6>
-                    <p>Per qualsiasi informazione, richiesta o segnalazione, è possibile contattarci all'indirizzo email: <a href="mailto:dynamic-traffic-manager@gmail.com">dynamic-traffic-manager@gmail.com</a></p>
+                    <p>Per qualsiasi informazione, richiesta o segnalazione, è possibile contattarci all'indirizzo email: <a href="mailto:dynamictrafficmanager@gmail.com">dynamictrafficmanager@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -660,8 +777,8 @@
                                 <h6 class="mb-4">Informazioni di Contatto</h6>
                                 <p class="mb-3 text-dark">
                                     <i class="fas fa-envelope me-2"></i>
-                                    <a href="mailto:dynamic-traffic-manager@gmail.com" class="text-decoration-none text-dark">
-                                        dynamic-traffic-manager@gmail.com
+                                    <a href="mailto:dynamictrafficmanager@gmail.com" class="text-decoration-none text-dark">
+                                        dynamictrafficmanager@gmail.com
                                     </a>
                                 </p>
                                 <p class="mb-3 text-dark">
@@ -730,6 +847,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
 </body>
 
 </html>
