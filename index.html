@@ -43,7 +43,7 @@
             background-color: rgba(0, 0, 0, 0.9);
             color: white;
             padding: 10px;
-            z-index: 9999; /* Assicura che sia sopra il resto del contenuto */
+            z-index: 9999;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -51,33 +51,81 @@
 
         .gdpr-banner .container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 10px;
             width: 100%;
             max-width: 1200px;
+            padding: 10px;
         }
 
         .gdpr-banner p {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 1rem);
             margin: 0;
+            line-height: 1.4;
+        }
+
+        .gdpr-banner .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
         }
 
         .gdpr-banner button {
-            font-size: 0.8rem;
-            margin-left: 10px;
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+            padding: 8px 16px;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .gdpr-banner .container {
+                padding: 8px;
+            }
+
+            .gdpr-banner p {
+                font-size: 0.8rem;
+            }
+
+            .gdpr-banner .buttons {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .gdpr-banner button {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gdpr-banner .container {
+                padding: 6px;
+            }
+
+            .gdpr-banner p {
+                font-size: 0.75rem;
+            }
+
+            .gdpr-banner button {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+            }
+        }
+
+        .scratch-frame {
+            width: 100%;
+            height: 70vh;
+            max-height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 0 auto;
         }
 
         .scratch-frame iframe {
             width: 100%;
-            height: 500px;
-        }
-
-        /* Responsive: riduce le dimensioni dei pulsanti sui dispositivi più piccoli */
-        @media (max-width: 768px) {
-            .gdpr-banner button {
-                font-size: 0.7rem;
-                padding: 5px 10px;
-            }
+            height: 100%;
         }
 
         .feature-box h3 {
@@ -142,7 +190,7 @@
                     height: 30px;
                     margin-right: 8px;
                     flex-shrink: 0;
-                    /* evita che l’icona si riduca */
+                    /* evita che l'icona si riduca */
                 }
 
                 .navbar-brand::after {
@@ -237,9 +285,11 @@
 <body>
     <div class="gdpr-banner" id="gdprBanner">
         <div class="container">
-            <p>Questo sito incorpora contenuti da <a href="https://scratch.mit.edu/terms_of_use" target="_blank">Scratch</a> e fornisce link ad <a href="https://www.aliexpress.com/af/terms.html" target="_blank">AliExpress</a>. Queste terze parti potrebbero raccogliere dati personali o utilizzare cookie. Ti invitiamo a consultare le loro <a href="https://scratch.mit.edu/privacy_policy" target="_blank">politiche sulla privacy di Scratch</a> e <a href="https://www.aliexpress.com/af/privacy-policy.html" target="_blank">politiche sulla privacy di AliExpress</a> per maggiori informazioni. Puoi liberamente rifiutare il tuo consenso. Il rifiuto del consenso può rendere non disponibili alcune funzioni del sito, inclusi i contenuti di terze parti. Usa il pulsante “Accetta” per acconsentire. Chiudi questa informativa per continuare senza accettare. Per revocare il consenso ai cookie di Scratch, visita la loro <a href="https://scratch.mit.edu/privacy_policy" target="_blank">privacy policy</a> e segui le istruzioni su come gestire o disabilitare i cookie tramite il tuo browser.</p>
-            <button type="button" class="btn btn-primary" id="acceptCookies">Accetto Cookie</button>
-            <button type="button" class="btn btn-secondary" id="rejectCookies">Rifiuto Cookie</button>
+            <p>Questo sito incorpora contenuti da <a href="https://scratch.mit.edu/terms_of_use" target="_blank">Scratch</a> e fornisce link ad <a href="https://www.aliexpress.com/af/terms.html" target="_blank">AliExpress</a>. Queste terze parti potrebbero raccogliere dati personali o utilizzare cookie. Ti invitiamo a consultare le loro <a href="https://scratch.mit.edu/privacy_policy" target="_blank">politiche sulla privacy di Scratch</a> e <a href="https://www.aliexpress.com/af/privacy-policy.html" target="_blank">politiche sulla privacy di AliExpress</a> per maggiori informazioni. Puoi liberamente rifiutare il tuo consenso. Il rifiuto del consenso può rendere non disponibili alcune funzioni del sito, inclusi i contenuti di terze parti. Usa il pulsante "Accetta" per acconsentire. Chiudi questa informativa per continuare senza accettare. Per revocare il consenso ai cookie di Scratch, visita la loro <a href="https://scratch.mit.edu/privacy_policy" target="_blank">privacy policy</a> e segui le istruzioni su come gestire o disabilitare i cookie tramite il tuo browser.</p>
+            <div class="buttons">
+                <button type="button" class="btn btn-primary" id="acceptCookies">Accetto Cookie</button>
+                <button type="button" class="btn btn-secondary" id="rejectCookies">Rifiuto Cookie</button>
+            </div>
         </div>
     </div>
     
@@ -786,19 +836,19 @@
                     <span>&copy; 2025 Dynamic Traffic Manager. Tutti i diritti riservati.</span>
                     <span class="ms-4">
                         <a href="#" class="text-muted text-decoration-none" data-bs-toggle="modal"
-                            data-bs-target="#legalModal">Informazioni Legali e Termini d’Uso</a>
+                            data-bs-target="#legalModal">Informazioni Legali e Termini d'Uso</a>
                     </span>
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- Informazioni Legali e Termini d’Uso Modal -->
+    <!-- Informazioni Legali e Termini d'Uso Modal -->
     <div class="modal fade" id="legalModal" tabindex="-1" aria-labelledby="legalModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="legalModalLabel">Informazioni Legali e Termini d’Uso</h5>
+                    <h5 class="modal-title" id="legalModalLabel">Informazioni Legali e Termini d'Uso</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
                 </div>
                 <div class="modal-body">
@@ -862,7 +912,7 @@
 
                     <h6 class="mt-4">Modifiche e Aggiornamenti</h6>
                     <p>Gli autori si riservano il diritto di modificare, aggiornare o rimuovere qualsiasi parte del sito
-                        senza preavviso. Le modifiche alle Informazioni Legali e Termini d’Uso entreranno in vigore immediatamente dopo la loro
+                        senza preavviso. Le modifiche alle Informazioni Legali e Termini d'Uso entreranno in vigore immediatamente dopo la loro
                         pubblicazione sul sito.</p>
 
                     <h6 class="mt-4">Contatti</h6>
