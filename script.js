@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const rejectButton = document.getElementById('rejectCookies');
 
     // Mostra il banner solo se non è stato accettato o rifiutato
-    if (localStorage.getItem('gdprAccepted') !== 'true' && localStorage.getItem('gdprAccepted') !== 'false') {
-        banner.style.display = 'flex';  // Mostra il banner
-    }
+    //if (localStorage.getItem('gdprAccepted') !== 'true' && localStorage.getItem('gdprAccepted') !== 'false') {
+    //    banner.style.display = 'flex';  // Mostra il banner
+    //}
 
     // Se il bottone "Accetto" viene cliccato
     acceptButton.addEventListener('click', function () {
