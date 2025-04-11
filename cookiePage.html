@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulazione Interattiva</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background-color: #f8f9fa;
+    }
+    .message-box {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+    }
+    .message-box h1 {
+      font-size: 2rem;
+      color: #343a40;
+    }
+    .message-box p {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+    .message-box .btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .message-box .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="message-box">
+      <h1>Accetta i Cookie per Visualizzare la Simulazione Interattiva</h1>
+      <p>Per continuare a esplorare la simulazione interattiva, è necessario accettare l'uso dei cookie. Questo ci permette di offrirti un'esperienza migliore e più personalizzata.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (opzionale, ma utile per eventuali interazioni) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Eventuale codice per la gestione del bottone (es. mostrare contenuti successivi)
+    document.getElementById("accept-btn").addEventListener("click", function() {
+      alert("Cookie Accettati! Ora puoi vedere la simulazione.");
+      // Puoi inserire qui il codice per far apparire la simulazione o il contenuto interattivo
+    });
+  </script>
+
+</body>
+</html>

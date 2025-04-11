@@ -41,7 +41,7 @@ document.querySelectorAll('.feature-card').forEach(card => {
 });
 
 // Carica direttamente l'iframe del progetto Scratch
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const scratchFrame = document.querySelector('.scratch-frame iframe');
     const placeholder = document.getElementById('gdpr-popup');
     const loadButton = document.getElementById('loadScratch');
@@ -55,7 +55,49 @@ document.addEventListener('DOMContentLoaded', function () {
             scratchFrame.src = 'https://scratch.mit.edu/projects/1156817768/embed';  // Inserisci il tuo ID progetto
         });
     }
+});*/
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scratchFrame = document.querySelector('.scratch-frame iframe');
+    const banner = document.getElementById('gdprBanner');
+    const acceptButton = document.getElementById('acceptCookies');
+    const rejectButton = document.getElementById('rejectCookies');
+
+    // Mostra il banner solo se non è stato accettato o rifiutato
+    if (localStorage.getItem('gdprAccepted') !== 'true' && localStorage.getItem('gdprAccepted') !== 'false') {
+        banner.style.display = 'flex';  // Mostra il banner
+    }
+
+    // Se il bottone "Accetto" viene cliccato
+    acceptButton.addEventListener('click', function () {
+        // Nasconde il banner
+        banner.style.display = 'none';
+
+        // Imposta l'URL del progetto Scratch
+        scratchFrame.src = 'https://scratch.mit.edu/projects/1156817768/embed';  // Inserisci il tuo ID progetto
+
+        // Salva che l'utente ha accettato la privacy
+        localStorage.setItem('gdprAccepted', 'true');
+    });
+
+    // Se il bottone "Rifiuto" viene cliccato
+    rejectButton.addEventListener('click', function () {
+        // Nasconde il banner
+        banner.style.display = 'none';
+
+        // Non carica il progetto Scratch se l'utente rifiuta
+        scratchFrame.src = '';
+
+        // Salva che l'utente ha rifiutato la privacy
+        localStorage.setItem('gdprAccepted', 'false');
+    });
 });
+
+
+
+
 
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
