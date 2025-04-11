@@ -233,15 +233,6 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
-.scratch-frame iframe {
-    width: 800px;
-    height: 663px;
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .placeholder {
     text-align: center;
     color: var(--secondary-color);

@@ -76,10 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         banner.style.display = 'none';
 
         // Imposta l'URL del progetto Scratch
-        scratchFrame.src = 'https://scratch.mit.edu/projects/1156817768/embed';  // Inserisci il tuo ID progetto
-
-        // Salva che l'utente ha accettato la privacy
-        localStorage.setItem('gdprAccepted', 'true');
+        scratchFrame.src = 'https://scratch.mit.edu/projects/1156817768/embed';
     });
 
     // Se il bottone "Rifiuto" viene cliccato
@@ -88,15 +85,17 @@ document.addEventListener('DOMContentLoaded', function () {
         banner.style.display = 'none';
 
         // Non carica il progetto Scratch se l'utente rifiuta
-        scratchFrame.src = '';
-
-        // Salva che l'utente ha rifiutato la privacy
-        localStorage.setItem('gdprAccepted', 'false');
+        scratchFrame.src = "cookieBlocked.html";
     });
 });
 
 
-
+window.addEventListener('message', function(event) {
+    // Verifica che il messaggio provenga dalla fonte corretta
+    if (event.data === 'reload') {
+      location.reload();
+    }
+  });
 
 
 // Navbar scroll effect
