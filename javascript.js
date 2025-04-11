@@ -55,5 +55,6 @@ function loadScratchProject() {
     scratchFrame.appendChild(iframe);
 }
 
+
 // Aggiungi un event listener per caricare il progetto Scratch quando l'utente clicca sul placeholder
 document.querySelector('.placeholder').addEventListener('click', loadScratchProject); 

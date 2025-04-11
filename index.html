@@ -173,6 +173,12 @@
 </head>
 
 <body>
+    <div id="gdpr-popup">
+        <h4>Informativa sulla Privacy</h4>
+        <p>Questo sito incorpora contenuti da Scratch e fornisce link ad AliExpress. Queste terze parti potrebbero raccogliere dati personali o utilizzare cookie. Ti invitiamo a consultare le loro politiche sulla privacy per maggiori informazioni.</p>
+        <button onclick="acceptPrivacy()" id="loadScratch">Ho capito</button>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
@@ -338,7 +344,7 @@
                 <div class="col-lg-10">
                     <div class="simulation-container">
                         <div class="scratch-frame">
-                            <iframe src="https://scratch.mit.edu/projects/1156817768/embed" 
+                            <iframe src="" 
                                     width="100%" 
                                     height="100%" 
                                     frameborder="0" 
@@ -683,24 +689,24 @@
     </footer>
 
     <!-- Note Legali Modal -->
-    <div class="modal fade" id="legalModal" tabindex="-1">
+    <div class="modal fade" id="legalModal" tabindex="-1" aria-labelledby="legalModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Note Legali</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title" id="legalModalLabel">Note Legali</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
                 </div>
                 <div class="modal-body">
                     <h6>Informazioni Generali</h6>
                     <p>Questo sito web è stato sviluppato come progetto scolastico da alcuni studenti della classe 4Ci dell'IIS Silva Ricci di Legnago. Il sito è stato creato esclusivamente a scopo didattico e non ha fini commerciali.</p>
-                    
+
                     <h6 class="mt-4">Proprietà Intellettuale</h6>
                     <p>Tutti i contenuti presenti su questo sito, inclusi testi, immagini, loghi, design e codice sorgente, sono protetti da copyright e sono di proprietà degli autori del progetto. È vietata qualsiasi forma di riproduzione, distribuzione o modifica senza l'esplicito consenso degli autori.</p>
                     <p class="mt-2">La simulazione interattiva è sviluppata utilizzando la piattaforma Scratch, di proprietà del Massachusetts Institute of Technology (MIT). Tutti i diritti relativi alla piattaforma Scratch, inclusi i contenuti generati tramite essa, sono di proprietà del MIT. Gli autori di questo sito non detengono alcun diritto sulla piattaforma Scratch o sui suoi contenuti.</p>
-                    
+
                     <h6 class="mt-4">Contenuti Generati da IA</h6>
                     <p>Alcuni contenuti presenti su questo sito potrebbero essere stati generati o assistiti da sistemi di intelligenza artificiale. Gli autori si impegnano a garantire l'accuratezza delle informazioni, ma non possono garantire la perfezione assoluta dei contenuti generati da IA. Si consiglia agli utenti di verificare personalmente le informazioni presentate.</p>
-                    
+
                     <h6 class="mt-4">Responsabilità</h6>
                     <p>Gli autori del sito non si assumono alcuna responsabilità per:</p>
                     <ul>
@@ -712,11 +718,12 @@
                         <li>Eventuali danni o problemi derivanti dall'utilizzo della simulazione Scratch</li>
                     </ul>
                     <p class="mt-2">Il sito è stato sviluppato a scopo didattico e potrebbe contenere imperfezioni o errori. Gli autori si impegnano a correggere eventuali problemi segnalati, ma non garantiscono la perfezione assoluta del sito o dei suoi contenuti.</p>
-                    
+
                     <h6 class="mt-4">Collegamenti Esterni</h6>
                     <p>I link a siti esterni sono forniti per comodità degli utenti. Gli autori non sono responsabili del contenuto, della privacy policy o delle pratiche di siti terzi. Si consiglia di leggere attentamente le condizioni d'uso e le politiche sulla privacy di ogni sito visitato.</p>
 
-                    <h6 class="mt-4">Simulazione Scratch</h6>                    <p>La simulazione interattiva è sviluppata utilizzando la piattaforma Scratch, di proprietà del MIT. Si noti che:</p>
+                    <h6 class="mt-4">Simulazione Scratch</h6>
+                    <p>La simulazione interattiva è sviluppata utilizzando la piattaforma Scratch, di proprietà del MIT. Si noti che:</p>
                     <ul>
                         <li>La piattaforma Scratch è gestita e controllata esclusivamente dal MIT</li>
                         <li>Scratch potrebbe raccogliere informazioni e utilizzare cookie per il funzionamento della piattaforma</li>
@@ -731,9 +738,13 @@
                     <h6 class="mt-4">Contatti</h6>
                     <p>Per qualsiasi informazione, richiesta o segnalazione, è possibile contattarci all'indirizzo email: <a href="mailto:dynamictrafficmanager@gmail.com">dynamictrafficmanager@gmail.com</a></p>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                </div>
             </div>
         </div>
     </div>
+
 
     <!-- Contact Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1">

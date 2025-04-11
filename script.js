@@ -41,25 +41,20 @@ document.querySelectorAll('.feature-card').forEach(card => {
 });
 
 // Carica direttamente l'iframe del progetto Scratch
-document.addEventListener('DOMContentLoaded', function() {
-    const scratchFrame = document.querySelector('.scratch-frame');
-    const placeholder = document.querySelector('.placeholder');
-    
-    // Rimuovi il placeholder
-    placeholder.style.display = 'none';
-    
-    // Crea l'iframe per il progetto Scratch
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://scratch.mit.edu/projects/1156817768/embed';  // URL vecchio: 1153932087
-    iframe.allowTransparency = true;
-    iframe.width = '100%';
-    iframe.height = '100%';
-    iframe.frameBorder = '0';
-    iframe.scrolling = 'no';
-    iframe.allowFullscreen = true;
-    
-    // Aggiungi l'iframe al frame
-    scratchFrame.appendChild(iframe);
+document.addEventListener('DOMContentLoaded', function () {
+    const scratchFrame = document.querySelector('.scratch-frame iframe');
+    const placeholder = document.getElementById('gdpr-popup');
+    const loadButton = document.getElementById('loadScratch');
+
+    if (loadButton && scratchFrame) {
+        loadButton.addEventListener('click', function () {
+            // Nasconde il popup GDPR
+            placeholder.style.display = 'none';
+
+            // Imposta l'URL del progetto Scratch
+            scratchFrame.src = 'https://scratch.mit.edu/projects/1156817768/embed';  // Inserisci il tuo ID progetto
+        });
+    }
 });
 
 // Navbar scroll effect
