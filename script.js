@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // If all validations pass, prepare the email
-            const mailtoLink = `mailto:dynamictrafficmanager@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+            const mailtoLink = `mailto:info@dynamictraffic.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
                 `Nome: ${name}\nEmail: ${email}\n\nMessaggio:\n${message}`
             )}`;
             
