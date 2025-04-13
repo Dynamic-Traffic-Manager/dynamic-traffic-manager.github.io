@@ -18,7 +18,7 @@
     <meta property="og:description"
         content="Un progetto innovativo per la gestione del traffico stradale sviluppato da alcuni studenti della classe 4Ci dell'IIS Silva Ricci.">
     <meta property="og:image" content="https://scratch.mit.edu/projects/1156817768/embed">
-    <meta property="og:url" content="https://dynamic-traffic-manager.github.io">
+    <meta property="og:url" content="http://dynamictraffic.it">
     <meta property="og:type" content="website">
 
     <title>Sistema di Bilanciamento Dinamico del Traffico</title>
@@ -294,7 +294,7 @@
 <body>
     <div class="gdpr-banner" id="gdprBanner">
         <div class="container">
-            <p>Questo sito non raccoglie alcun dato personale, eccetto quelli eventualmente raccolti dai siti esterni tramite i loro cookie (come <a href="https://scratch.mit.edu/privacy_policy" target="_blank">Scratch</a>). Se clicchi su uno dei link (come Scratch, Maps, ITIS Silva Ricci, AliExpress, Amazon), il sito di destinazione sarà responsabile dei suoi cookie e delle relative politiche sulla privacy. Per maggiori informazioni sulla nostra politica sulla privacy, visita <a href="#" data-bs-toggle="modal" data-bs-target="#legalModal">la nostra privacy policy</a>.</p>
+            <p>Questo sito non raccoglie alcun dato personale, eccetto quelli eventualmente raccolti dai siti esterni tramite i loro cookie (come <a href="https://scratch.mit.edu/privacy_policy" target="_blank">Scratch</a>). Se clicchi su uno dei link (come Scratch, Maps, ITIS Silva Ricci, AliExpress, Amazon), il sito di destinazione sarà responsabile dei suoi cookie e delle relative politiche sulla privacy. <b>Nota</b>: i contenuti esterni incorporati (come la simulazione Scratch) sono inizialmente bloccati per tutelare la tua privacy. Saranno caricati solo dopo il tuo consenso, momento in cui potrebbero essere attivati i cookie del sito terzo. Per maggiori informazioni sulla nostra politica sulla privacy, visita <a href="#" data-bs-toggle="modal" data-bs-target="#legalModal">la nostra privacy policy</a>.</p>
             <div class="buttons">
                 <button type="button" class="btn btn-primary" id="acceptCookies">Accetto</button>
                 <button type="button" class="btn btn-secondary" id="rejectCookies">Rifiuto</button>
@@ -318,6 +318,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#features">Caratteristiche</a>
                     </li>
                     <li class="nav-item">
@@ -336,7 +339,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <div class="hero-content">
             <h1>Gestione Intelligente del Traffico</h1>
             <p class="lead">Un sistema che <strong>bilancia automaticamente</strong> il traffico urbano, <strong>riduce
@@ -579,7 +582,28 @@
         </div>
     </section>
 
-
+    <!-- Applicazioni Versatili Section -->
+    <section class="py-5">
+        <div class="container col-lg-6">
+          <div class="application-box p-4 bg-light rounded-3 shadow-sm m-5">
+            <h2 class="text-center mb-2">Un solo hardware, <strong>molteplici applicazioni</strong></h2>
+            <p class="lead text-center mb-5 mx-5">
+              Il nostro <strong>sistema di bilanciamento dinamico del traffico</strong> non si limita a ottimizzare la viabilità urbana. 
+              Grazie alla sua <strong>architettura modulare</strong> e all'<strong>hardware compatto e resistente</strong>, può essere facilmente 
+              adattato a <strong>diverse esigenze operative</strong>.
+            </p>
+      
+            <h3 class="text-center mb-2"><strong>Conteggio Veicoli nei Parcheggi</strong></h3>
+            <p class="lead mb-0 text-center mx-5">
+              Utilizzando gli <strong>stessi sensori</strong> e <strong>algoritmi di analisi in tempo reale</strong>, il sistema può monitorare 
+              l'ingresso e l'uscita dei veicoli in aree di parcheggio, fornendo <strong>dati accurati sull'occupazione in tempo reale</strong>. 
+              Queste informazioni possono essere integrate con <strong>pannelli informativi</strong> o <strong>applicazioni mobili</strong> per guidare 
+              gli utenti verso <strong>spazi disponibili</strong>, migliorando l'<strong>efficienza</strong> e riducendo i <strong>tempi di ricerca</strong> di un posto auto.
+            </p>
+          </div>
+        </div>
+      </section>
+        
 
     <!-- Costi Section -->
     <section id="costi" class="py-5">
@@ -863,71 +887,78 @@
                 </div>
                 <div class="modal-body">
                     <h6>Informazioni Generali</h6>
-                    <p>Questo sito web è stato sviluppato come progetto scolastico da alcuni studenti della classe 4Ci
-                        dell'IIS Silva Ricci di Legnago. Il sito è stato creato esclusivamente a scopo didattico e non
+                    <p><strong>Questo sito web è stato sviluppato come progetto scolastico</strong> da alcuni studenti della classe 4Ci
+                        dell'IIS Silva Ricci di Legnago. <strong>Il sito è stato creato esclusivamente a scopo didattico</strong> e non
                         ha fini commerciali. È stato realizzato per accompagnare una presentazione e fornire supporto visivo e interattivo ai contenuti esposti.</p>
-                        
-
+    
                     <h6 class="mt-4">Proprietà Intellettuale</h6>
-                    <p>Tutti i contenuti presenti su questo sito, inclusi testi, immagini, loghi, design e codice
-                        sorgente, sono protetti da copyright e sono di proprietà degli autori del progetto. È vietata
-                        qualsiasi forma di riproduzione, distribuzione o modifica senza l'esplicito consenso degli
+                    <p><strong>Tutti i contenuti presenti su questo sito</strong>, inclusi testi, immagini, loghi, design e codice
+                        sorgente, <strong>sono protetti da copyright</strong> e sono di proprietà degli autori del progetto. <strong>È vietata
+                        qualsiasi forma di riproduzione, distribuzione o modifica senza l'esplicito consenso</strong> degli
                         autori.</p>
-                    <p class="mt-2">La simulazione interattiva è sviluppata utilizzando la piattaforma Scratch, di
-                        proprietà del Massachusetts Institute of Technology (MIT). Tutti i diritti relativi alla
-                        piattaforma Scratch, inclusi i contenuti generati tramite essa, sono di proprietà del MIT. Gli
-                        autori di questo sito non detengono alcun diritto sulla piattaforma Scratch o sui suoi
+                    <p class="mt-2">La simulazione interattiva è sviluppata utilizzando la piattaforma <strong>Scratch, di proprietà del Massachusetts Institute of Technology (MIT)</strong>. Tutti i diritti relativi alla
+                        piattaforma Scratch, inclusi i contenuti generati tramite essa, <strong>sono di proprietà del MIT</strong>. Gli
+                        autori di questo sito <strong>non detengono alcun diritto</strong> sulla piattaforma Scratch o sui suoi
                         contenuti.</p>
-
+    
                     <h6 class="mt-4">Contenuti Generati da IA</h6>
-                    <p>Alcuni contenuti presenti su questo sito potrebbero essere stati generati o assistiti da sistemi
-                        di intelligenza artificiale. Gli autori si impegnano a garantire l'accuratezza delle
-                        informazioni, ma non possono garantire la perfezione assoluta dei contenuti generati da IA. Si
-                        consiglia agli utenti di verificare personalmente le informazioni presentate.</p>
-
+                    <p><strong>Alcuni contenuti presenti su questo sito potrebbero essere stati generati o assistiti da sistemi
+                            di intelligenza artificiale. Il presente modulo potrebbe essere stato generato da AI.</strong> Gli autori si impegnano a garantire l'accuratezza delle
+                        informazioni, ma <strong>non possono garantire la perfezione assoluta</strong> dei contenuti generati da IA. Si
+                        consiglia agli utenti di <strong>verificare personalmente le informazioni</strong> presentate.</p>
+    
                     <h6 class="mt-4">Responsabilità</h6>
-                    <p>Gli autori del sito non si assumono alcuna responsabilità per:</p>
+                    <p><strong>Gli autori del sito non si assumono alcuna responsabilità</strong> per:</p>
                     <ul>
-                        <li>Eventuali errori, omissioni o imperfezioni nei contenuti, inclusi quelli generati da IA</li>
-                        <li>Interruzioni o malfunzionamenti del servizio</li>
+                        <li><strong>Eventuali errori, omissioni o imperfezioni</strong> nei contenuti, inclusi quelli generati da IA</li>
+                        <!--<li>Interruzioni o malfunzionamenti del servizio</li>-->
                         <li>Contenuti di siti terzi collegati</li>
                         <li>Contenuti, funzionamento, privacy policy o utilizzo di cookie della piattaforma Scratch</li>
                         <li>Eventuali danni o problemi derivanti dall'utilizzo della simulazione Scratch</li>
                     </ul>
-                    <p class="mt-2"><b>Il sito è stato sviluppato a scopo didattico e potrebbe contenere imperfezioni o
+                    <p class="mt-2"><strong>Il sito è stato sviluppato a scopo didattico e potrebbe contenere imperfezioni o
                         errori. Gli autori si impegnano a correggere eventuali problemi segnalati, ma non garantiscono
-                        la perfezione assoluta del sito o dei suoi contenuti.</b></p>
-
+                        la perfezione assoluta del sito o dei suoi contenuti.</strong></p>
+    
                     <h6 class="mt-4">Collegamenti Esterni</h6>
-                    <p>I link a siti esterni sono forniti per comodità degli utenti. Gli autori non sono responsabili
-                        del contenuto, della privacy policy o delle pratiche di siti terzi. Si consiglia di leggere
+                    <p>I link a siti esterni sono forniti <strong>per comodità degli utenti</strong>. Gli autori <strong>non sono responsabili
+                        del contenuto, della privacy policy o delle pratiche di siti terzi</strong>. Si consiglia di leggere
                         attentamente le condizioni d'uso e le politiche sulla privacy di ogni sito visitato.</p>
-
+    
                     <h6 class="mt-4">Simulazione Scratch</h6>
-                    <p>La simulazione interattiva è sviluppata utilizzando la piattaforma Scratch, di proprietà del MIT.
+                    <p>La simulazione interattiva è sviluppata utilizzando la piattaforma <strong>Scratch, di proprietà del MIT</strong>.
                         Si noti che:</p>
                     <ul>
-                        <li>La piattaforma Scratch è gestita e controllata esclusivamente dal MIT</li>
+                        <li><strong>La piattaforma Scratch è gestita e controllata esclusivamente dal MIT</strong></li>
                         <li>Scratch potrebbe raccogliere informazioni e utilizzare cookie per il funzionamento della
                             piattaforma</li>
-                        <li>La simulazione è eseguita in un ambiente sandbox per garantire la sicurezza</li>
+                        <li><strong>La simulazione è eseguita in un ambiente sandbox per garantire la sicurezza</strong></li>
                         <li>Per maggiori informazioni sulla privacy, l'utilizzo dei cookie e le condizioni d'uso di
                             Scratch, si prega di consultare la <a href="https://scratch.mit.edu/privacy_policy/"
                                 target="_blank">Privacy Policy di Scratch</a> e i <a
                                 href="https://scratch.mit.edu/terms_of_use/" target="_blank">Termini di Utilizzo di
                                 Scratch</a></li>
-                        <li>Gli autori di questo sito non sono responsabili per il contenuto, il funzionamento o le
-                            politiche di Scratch</li>
+                        <li>Gli autori di questo sito <strong>non sono responsabili per il contenuto, il funzionamento o le
+                            politiche di Scratch</strong></li>
                     </ul>
-
+    
                     <h6 class="mt-4">Modifiche e Aggiornamenti</h6>
-                    <p>Gli autori si riservano il diritto di modificare, aggiornare o rimuovere qualsiasi parte del sito
-                        senza preavviso. Le modifiche alle Informazioni Legali e Termini d'Uso entreranno in vigore immediatamente dopo la loro
+                    <p><strong>Gli autori si riservano il diritto</strong> di modificare, aggiornare o rimuovere qualsiasi parte del sito
+                        senza preavviso. Le modifiche alle Informazioni Legali e Termini d'Uso <strong>entreranno in vigore immediatamente</strong> dopo la loro
                         pubblicazione sul sito.</p>
-
+    
                     <h6 class="mt-4">Contatti</h6>
                     <p>Per qualsiasi informazione, richiesta o segnalazione, è possibile contattarci all'indirizzo
                         email: <a href="mailto:info@dynamictraffic.it">info@dynamictraffic.it</a></p>
+    
+                    <h6 class="mt-4">Licenze e Riconoscimenti</h6>
+                    <p><strong>Questo sito utilizza Bootstrap sotto licenza MIT e le icone di Bootstrap, che sono anch'esse sotto licenza MIT. Inoltre, sono stati inclusi i seguenti strumenti:</strong></p>
+                    <ul>
+                        <li>Google Fonts: <a href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" target="_blank">Poppins Font</a></li>
+                        <li>Bootstrap CSS: <a href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" target="_blank">Bootstrap 5</a></li>
+                        <li>Font Awesome: <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" target="_blank">Font Awesome Icons</a></li>
+                        <li>Animate.css: <a href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" target="_blank">Animate.css</a></li>
+                    </ul>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
@@ -935,9 +966,11 @@
             </div>
         </div>
     </div>
+    
+    
+    
 
-
-    <!-- Contact Modal -->info@dynamictraffic.it
+    <!-- Contact Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -1025,11 +1058,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            window.scrollTo(0, 0);
-        });
-    </script>
 </body>
 
 </html>

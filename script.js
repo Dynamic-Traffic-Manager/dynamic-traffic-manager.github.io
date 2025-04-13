@@ -1,4 +1,6 @@
-
+document.addEventListener("DOMContentLoaded", function () {
+    window.scrollTo(0, 0);
+});
 
 // Animazione dello scroll fluido per i link interni
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
