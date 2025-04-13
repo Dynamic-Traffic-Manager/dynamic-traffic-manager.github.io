@@ -115,7 +115,8 @@
         .scratch-frame {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio */
             margin: 0;
             padding: 0;
         }
@@ -133,7 +134,8 @@
 
         @media (max-width: 768px) {
             .scratch-frame {
-                padding-top: 75%; /* 4:3 Aspect Ratio for mobile */
+                padding-top: 75%;
+                /* 4:3 Aspect Ratio for mobile */
             }
         }
 
@@ -294,15 +296,23 @@
 <body>
     <div class="gdpr-banner" id="gdprBanner">
         <div class="container">
-            <p>Questo sito non raccoglie alcun dato personale, eccetto quelli eventualmente raccolti dai siti esterni tramite i loro cookie (come <a href="https://scratch.mit.edu/privacy_policy" target="_blank">Scratch</a>). Se clicchi su uno dei link (come Scratch, Maps, ITIS Silva Ricci, AliExpress, Amazon), il sito di destinazione sarà responsabile dei suoi cookie e delle relative politiche sulla privacy. <b>Nota</b>: i contenuti esterni incorporati (come la simulazione Scratch) sono inizialmente bloccati per tutelare la tua privacy. Saranno caricati solo dopo il tuo consenso, momento in cui potrebbero essere attivati i cookie del sito terzo. Per maggiori informazioni sulla nostra politica sulla privacy, visita <a href="#" data-bs-toggle="modal" data-bs-target="#legalModal">la nostra privacy policy</a>.</p>
+            <p>Questo sito non raccoglie alcun dato personale, eccetto quelli eventualmente raccolti dai siti esterni
+                tramite i loro cookie (come <a href="https://scratch.mit.edu/privacy_policy"
+                    target="_blank">Scratch</a>). Se clicchi su uno dei link (come Scratch, Maps, ITIS Silva Ricci,
+                AliExpress, Amazon), il sito di destinazione sarà responsabile dei suoi cookie e delle relative
+                politiche sulla privacy. <b>Nota</b>: i contenuti esterni incorporati (come la simulazione Scratch) sono
+                inizialmente bloccati per tutelare la tua privacy. Saranno caricati solo dopo il tuo consenso, momento
+                in cui potrebbero essere attivati i cookie del sito terzo. Per maggiori informazioni sulla nostra
+                politica sulla privacy, visita <a href="#" data-bs-toggle="modal" data-bs-target="#legalModal">la nostra
+                    privacy policy</a>.</p>
             <div class="buttons">
                 <button type="button" class="btn btn-primary" id="acceptCookies">Accetto</button>
                 <button type="button" class="btn btn-secondary" id="rejectCookies">Rifiuto</button>
             </div>
         </div>
     </div>
-    
-    
+
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -334,7 +344,7 @@
                             data-bs-target="#contactModal">Contattaci</a>
                     </li>
                 </ul>
-            </div>  
+            </div>
         </div>
     </nav>
 
@@ -485,8 +495,8 @@
                 <div class="col-lg-10">
                     <div class="simulation-container">
                         <div class="scratch-frame">
-                            <iframe src="cookiePage.html" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen=""
-                                allow="autoplay"></iframe>
+                            <iframe src="cookiePage.html" width="100%" height="100%" frameborder="0" scrolling="no"
+                                allowfullscreen="" allow="autoplay"></iframe>
                         </div>
                     </div>
                 </div>
@@ -555,7 +565,8 @@
                         <h3>Industrializzazione</h3>
                         <p>Il design modulare permette una <strong>facile industrializzazione</strong> e
                             <strong>produzione in serie</strong>, garantendo scalabilità e adattabilità a diverse
-                            esigenze urbane.</p>
+                            esigenze urbane.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -583,27 +594,60 @@
     </section>
 
     <!-- Applicazioni Versatili Section -->
-    <section class="py-5">
-        <div class="container col-lg-6">
-          <div class="application-box p-4 bg-light rounded-3 shadow-sm m-5">
-            <h2 class="text-center mb-2">Un solo hardware, <strong>molteplici applicazioni</strong></h2>
-            <p class="lead text-center mb-5 mx-5">
-              Il nostro <strong>sistema di bilanciamento dinamico del traffico</strong> non si limita a ottimizzare la viabilità urbana. 
-              Grazie alla sua <strong>architettura modulare</strong> e all'<strong>hardware compatto e resistente</strong>, può essere facilmente 
-              adattato a <strong>diverse esigenze operative</strong>.
-            </p>
-      
-            <h3 class="text-center mb-2"><strong>Conteggio Veicoli nei Parcheggi</strong></h3>
-            <p class="lead mb-0 text-center mx-5">
-              Utilizzando gli <strong>stessi sensori</strong> e <strong>algoritmi di analisi in tempo reale</strong>, il sistema può monitorare 
-              l'ingresso e l'uscita dei veicoli in aree di parcheggio, fornendo <strong>dati accurati sull'occupazione in tempo reale</strong>. 
-              Queste informazioni possono essere integrate con <strong>pannelli informativi</strong> o <strong>applicazioni mobili</strong> per guidare 
-              gli utenti verso <strong>spazi disponibili</strong>, migliorando l'<strong>efficienza</strong> e riducendo i <strong>tempi di ricerca</strong> di un posto auto.
-            </p>
-          </div>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="application-box p-5 bg-white rounded-4 shadow-sm position-relative overflow-hidden">
+                        <h1 class="text-center mb-1 display-5 fw-bold">Un solo hardware</h1>
+                        <h2 class="text-center mb-4 display-5 fw-bold"><span class="text-primary">Molteplici Applicazioni</span></h2>
+                        <p class="lead text-center mb-4">
+                            Il nostro <span class="fw-bold">sistema di bilanciamento dinamico del traffico</span> non si limita a
+                            ottimizzare la viabilità urbana. Grazie alla sua <span class="fw-bold">architettura modulare</span> e all'<span class="fw-bold">hardware compatto e
+                            resistente</span>, può essere facilmente adattato a <span class="fw-bold">diverse esigenze operative</span>.
+                        </p>
+
+                        <div class="text-center mb-4">
+                            <i class="fas fa-arrow-down fa-2x text-primary mb-3"></i>
+                            <h3 class="fw-bold">Conteggio Veicoli nei Parcheggi</h3>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="feature-item p-3 rounded-3 bg-light">
+                                    <i class="fas fa-lightbulb fa-2x text-primary mb-3"></i>
+                                    <h4 class="h5 fw-bold">Sensori Intelligenti</h4>
+                                    <p class="mb-0">Gli stessi sensori avanzati utilizzati per il traffico urbano monitorano con precisione l'ingresso e l'uscita dei veicoli.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item p-3 rounded-3 bg-light">
+                                    <i class="fas fa-mobile-alt fa-2x text-primary mb-3"></i>
+                                    <h4 class="h5 fw-bold">Integrazione Mobile</h4>
+                                    <p class="mb-0">Dati in tempo reale accessibili tramite app mobile, guidando gli utenti verso i posti disponibili.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item p-3 rounded-3 bg-light">
+                                    <i class="fas fa-chart-line fa-2x text-primary mb-3"></i>
+                                    <h4 class="h5 fw-bold">Analisi in Tempo Reale</h4>
+                                    <p class="mb-0">Algoritmi avanzati analizzano i dati per offrire informazioni precise e tempestive sull'occupazione, migliorando la gestione.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item p-3 rounded-3 bg-light">
+                                    <i class="fas fa-signal fa-2x text-primary mb-3"></i>
+                                    <h4 class="h5 fw-bold">Pannelli Informativi</h4>
+                                    <p class="mb-0">Display digitali mostrano in tempo reale la disponibilità dei posti, ottimizzando il flusso veicolare.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-        
+    </section>
+
 
     <!-- Costi Section -->
     <section id="costi" class="py-5">
@@ -854,8 +898,7 @@
                                 </div>
                                 <div class="email-contact text-center">
                                     <i class="fas fa-envelope me-2"></i>
-                                    <a href="mailto:info@dynamictraffic.it"
-                                        class="text-decoration-none text-light">
+                                    <a href="mailto:info@dynamictraffic.it" class="text-decoration-none text-light">
                                         info@dynamictraffic.it
                                     </a>
                                 </div>
@@ -867,7 +910,8 @@
             <hr class="my-4">
             <div class="text-center">
                 <p class="mb-0">
-                    <span>&copy; 2025 – Dynamic Traffic Manager (Progetto realizzato per fini didattici) Tutti i diritti riservati.</span>
+                    <span>&copy; 2025 – Dynamic Traffic Manager (Progetto realizzato per fini didattici) Tutti i diritti
+                        riservati.</span>
                     <span class="ms-4">
                         <a href="#" class="text-muted text-decoration-none" data-bs-toggle="modal"
                             data-bs-target="#legalModal">Informazioni Legali e Termini d'Uso</a>
@@ -887,77 +931,110 @@
                 </div>
                 <div class="modal-body">
                     <h6>Informazioni Generali</h6>
-                    <p><strong>Questo sito web è stato sviluppato come progetto scolastico</strong> da alcuni studenti della classe 4Ci
-                        dell'IIS Silva Ricci di Legnago. <strong>Il sito è stato creato esclusivamente a scopo didattico</strong> e non
-                        ha fini commerciali. È stato realizzato per accompagnare una presentazione e fornire supporto visivo e interattivo ai contenuti esposti.</p>
-    
+                    <p><strong>Questo sito web è stato sviluppato come progetto scolastico</strong> da alcuni studenti
+                        della classe 4Ci
+                        dell'IIS Silva Ricci di Legnago. <strong>Il sito è stato creato esclusivamente a scopo
+                            didattico</strong> e non
+                        ha fini commerciali. È stato realizzato per accompagnare una presentazione e fornire supporto
+                        visivo e interattivo ai contenuti esposti.</p>
+
                     <h6 class="mt-4">Proprietà Intellettuale</h6>
-                    <p><strong>Tutti i contenuti presenti su questo sito</strong>, inclusi testi, immagini, loghi, design e codice
-                        sorgente, <strong>sono protetti da copyright</strong> e sono di proprietà degli autori del progetto. <strong>È vietata
-                        qualsiasi forma di riproduzione, distribuzione o modifica senza l'esplicito consenso</strong> degli
+                    <p><strong>Tutti i contenuti presenti su questo sito</strong>, inclusi testi, immagini, loghi,
+                        design e codice
+                        sorgente, <strong>sono protetti da copyright</strong> e sono di proprietà degli autori del
+                        progetto. <strong>È vietata
+                            qualsiasi forma di riproduzione, distribuzione o modifica senza l'esplicito
+                            consenso</strong> degli
                         autori.</p>
-                    <p class="mt-2">La simulazione interattiva è sviluppata utilizzando la piattaforma <strong>Scratch, di proprietà del Massachusetts Institute of Technology (MIT)</strong>. Tutti i diritti relativi alla
-                        piattaforma Scratch, inclusi i contenuti generati tramite essa, <strong>sono di proprietà del MIT</strong>. Gli
-                        autori di questo sito <strong>non detengono alcun diritto</strong> sulla piattaforma Scratch o sui suoi
+                    <p class="mt-2">La simulazione interattiva è sviluppata utilizzando la piattaforma <strong>Scratch,
+                            di proprietà del Massachusetts Institute of Technology (MIT)</strong>. Tutti i diritti
+                        relativi alla
+                        piattaforma Scratch, inclusi i contenuti generati tramite essa, <strong>sono di proprietà del
+                            MIT</strong>. Gli
+                        autori di questo sito <strong>non detengono alcun diritto</strong> sulla piattaforma Scratch o
+                        sui suoi
                         contenuti.</p>
-    
+
                     <h6 class="mt-4">Contenuti Generati da IA</h6>
-                    <p><strong>Alcuni contenuti presenti su questo sito potrebbero essere stati generati o assistiti da sistemi
-                            di intelligenza artificiale. Il presente modulo potrebbe essere stato generato da AI.</strong> Gli autori si impegnano a garantire l'accuratezza delle
-                        informazioni, ma <strong>non possono garantire la perfezione assoluta</strong> dei contenuti generati da IA. Si
-                        consiglia agli utenti di <strong>verificare personalmente le informazioni</strong> presentate.</p>
-    
+                    <p><strong>Alcuni contenuti presenti su questo sito potrebbero essere stati generati o assistiti da
+                            sistemi
+                            di intelligenza artificiale. Il presente modulo potrebbe essere stato generato da
+                            AI.</strong> Gli autori si impegnano a garantire l'accuratezza delle
+                        informazioni, ma <strong>non possono garantire la perfezione assoluta</strong> dei contenuti
+                        generati da IA. Si
+                        consiglia agli utenti di <strong>verificare personalmente le informazioni</strong> presentate.
+                    </p>
+
                     <h6 class="mt-4">Responsabilità</h6>
                     <p><strong>Gli autori del sito non si assumono alcuna responsabilità</strong> per:</p>
                     <ul>
-                        <li><strong>Eventuali errori, omissioni o imperfezioni</strong> nei contenuti, inclusi quelli generati da IA</li>
+                        <li><strong>Eventuali errori, omissioni o imperfezioni</strong> nei contenuti, inclusi quelli
+                            generati da IA</li>
                         <!--<li>Interruzioni o malfunzionamenti del servizio</li>-->
                         <li>Contenuti di siti terzi collegati</li>
                         <li>Contenuti, funzionamento, privacy policy o utilizzo di cookie della piattaforma Scratch</li>
                         <li>Eventuali danni o problemi derivanti dall'utilizzo della simulazione Scratch</li>
                     </ul>
-                    <p class="mt-2"><strong>Il sito è stato sviluppato a scopo didattico e potrebbe contenere imperfezioni o
-                        errori. Gli autori si impegnano a correggere eventuali problemi segnalati, ma non garantiscono
-                        la perfezione assoluta del sito o dei suoi contenuti.</strong></p>
-    
+                    <p class="mt-2"><strong>Il sito è stato sviluppato a scopo didattico e potrebbe contenere
+                            imperfezioni o
+                            errori. Gli autori si impegnano a correggere eventuali problemi segnalati, ma non
+                            garantiscono
+                            la perfezione assoluta del sito o dei suoi contenuti.</strong></p>
+
                     <h6 class="mt-4">Collegamenti Esterni</h6>
-                    <p>I link a siti esterni sono forniti <strong>per comodità degli utenti</strong>. Gli autori <strong>non sono responsabili
-                        del contenuto, della privacy policy o delle pratiche di siti terzi</strong>. Si consiglia di leggere
+                    <p>I link a siti esterni sono forniti <strong>per comodità degli utenti</strong>. Gli autori
+                        <strong>non sono responsabili
+                            del contenuto, della privacy policy o delle pratiche di siti terzi</strong>. Si consiglia di
+                        leggere
                         attentamente le condizioni d'uso e le politiche sulla privacy di ogni sito visitato.</p>
-    
+
                     <h6 class="mt-4">Simulazione Scratch</h6>
-                    <p>La simulazione interattiva è sviluppata utilizzando la piattaforma <strong>Scratch, di proprietà del MIT</strong>.
+                    <p>La simulazione interattiva è sviluppata utilizzando la piattaforma <strong>Scratch, di proprietà
+                            del MIT</strong>.
                         Si noti che:</p>
                     <ul>
                         <li><strong>La piattaforma Scratch è gestita e controllata esclusivamente dal MIT</strong></li>
                         <li>Scratch potrebbe raccogliere informazioni e utilizzare cookie per il funzionamento della
                             piattaforma</li>
-                        <li><strong>La simulazione è eseguita in un ambiente sandbox per garantire la sicurezza</strong></li>
+                        <li><strong>La simulazione è eseguita in un ambiente sandbox per garantire la sicurezza</strong>
+                        </li>
                         <li>Per maggiori informazioni sulla privacy, l'utilizzo dei cookie e le condizioni d'uso di
                             Scratch, si prega di consultare la <a href="https://scratch.mit.edu/privacy_policy/"
                                 target="_blank">Privacy Policy di Scratch</a> e i <a
                                 href="https://scratch.mit.edu/terms_of_use/" target="_blank">Termini di Utilizzo di
                                 Scratch</a></li>
-                        <li>Gli autori di questo sito <strong>non sono responsabili per il contenuto, il funzionamento o le
-                            politiche di Scratch</strong></li>
+                        <li>Gli autori di questo sito <strong>non sono responsabili per il contenuto, il funzionamento o
+                                le
+                                politiche di Scratch</strong></li>
                     </ul>
-    
+
                     <h6 class="mt-4">Modifiche e Aggiornamenti</h6>
-                    <p><strong>Gli autori si riservano il diritto</strong> di modificare, aggiornare o rimuovere qualsiasi parte del sito
-                        senza preavviso. Le modifiche alle Informazioni Legali e Termini d'Uso <strong>entreranno in vigore immediatamente</strong> dopo la loro
+                    <p><strong>Gli autori si riservano il diritto</strong> di modificare, aggiornare o rimuovere
+                        qualsiasi parte del sito
+                        senza preavviso. Le modifiche alle Informazioni Legali e Termini d'Uso <strong>entreranno in
+                            vigore immediatamente</strong> dopo la loro
                         pubblicazione sul sito.</p>
-    
+
                     <h6 class="mt-4">Contatti</h6>
                     <p>Per qualsiasi informazione, richiesta o segnalazione, è possibile contattarci all'indirizzo
                         email: <a href="mailto:info@dynamictraffic.it">info@dynamictraffic.it</a></p>
-    
+
                     <h6 class="mt-4">Licenze e Riconoscimenti</h6>
-                    <p><strong>Questo sito utilizza Bootstrap sotto licenza MIT e le icone di Bootstrap, che sono anch'esse sotto licenza MIT. Inoltre, sono stati inclusi i seguenti strumenti:</strong></p>
+                    <p><strong>Questo sito utilizza Bootstrap sotto licenza MIT e le icone di Bootstrap, che sono
+                            anch'esse sotto licenza MIT. Inoltre, sono stati inclusi i seguenti strumenti:</strong></p>
                     <ul>
-                        <li>Google Fonts: <a href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" target="_blank">Poppins Font</a></li>
-                        <li>Bootstrap CSS: <a href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" target="_blank">Bootstrap 5</a></li>
-                        <li>Font Awesome: <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" target="_blank">Font Awesome Icons</a></li>
-                        <li>Animate.css: <a href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" target="_blank">Animate.css</a></li>
+                        <li>Google Fonts: <a
+                                href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+                                target="_blank">Poppins Font</a></li>
+                        <li>Bootstrap CSS: <a
+                                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+                                target="_blank">Bootstrap 5</a></li>
+                        <li>Font Awesome: <a
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+                                target="_blank">Font Awesome Icons</a></li>
+                        <li>Animate.css: <a
+                                href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+                                target="_blank">Animate.css</a></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -966,9 +1043,9 @@
             </div>
         </div>
     </div>
-    
-    
-    
+
+
+
 
     <!-- Contact Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1">
@@ -985,8 +1062,7 @@
                                 <h6 class="mb-4">Informazioni di Contatto</h6>
                                 <p class="mb-3 text-dark">
                                     <i class="fas fa-envelope me-2"></i>
-                                    <a href="mailto:info@dynamictraffic.it"
-                                        class="text-decoration-none text-dark">
+                                    <a href="mailto:info@dynamictraffic.it" class="text-decoration-none text-dark">
                                         info@dynamictraffic.it
                                     </a>
                                 </p>
