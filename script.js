@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         banner.style.display = 'none';
 
         // Imposta l'URL del progetto Scratch
-        scratchFrame.src = 'https://scratch.mit.edu/projects/1156817768/embed';
+        scratchFrame.src = 'https://scratch.mit.edu/projects/1161691682/embed'; // Old project id: 1156817768
     });
 
     // Se il bottone "Rifiuto" viene cliccato
