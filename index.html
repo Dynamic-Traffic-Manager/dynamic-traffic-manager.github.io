@@ -290,6 +290,35 @@
             color: #6c757d;
             margin-bottom: 0;
         }
+
+        .navbar-nav .nav-link {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            border-radius: 0.25rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .navbar-nav .nav-link[data-bs-target="#modalCircuit"] {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 0 0.5rem;
+        }
+
+        .navbar-nav .nav-link[data-bs-target="#modalCircuit"]:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .navbar-nav .nav-link[data-bs-target="#modalCircuit"] i {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 
@@ -360,6 +389,13 @@
                 </a>
                 <a href="#costi" class="btn btn-outline-light">
                     <i class="fas fa-calculator me-2"></i>Scopri i Costi
+                </a>
+                
+            </div>
+            <div class="hero-buttons">
+                <a class="btn btn-outline-light me-3" href="#" data-bs-toggle="modal"
+                    data-bs-target="#modalCircuit">
+                    <i class="fas fa-microchip"></i> Panoramica Hardware
                 </a>
             </div>
         </div>
@@ -1153,6 +1189,19 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modalCircuit" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content pb-3">
+                <div class="modal-header">
+                    <h5 class="modal-title">Panoramica Hardware</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <img src="Scheda.png" alt="Scheda" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
